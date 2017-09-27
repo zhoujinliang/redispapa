@@ -3,7 +3,7 @@
 /* Controllers */
 myApp.controller('RedisCtl', function($scope, $routeParams, $filter, $sce, socket) {
     $scope.send_command = function(command, args, r_server){
-        socket.emit('command_exec', {command: command, args:args, r_server: r_server});
+        socket.emit('command_exec', {command: command,uri: uri, args:args, r_server: r_server});
     }
     //highchart
     $scope.chartConfig_cmd = {

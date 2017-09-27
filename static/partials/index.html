@@ -73,16 +73,20 @@
         </div>
         <div class="col-md-8">
             <h3 class="text-info">Command Exec</h3>
-            <div class="form-inline" style="margin: 10px;">
+            <div class="form-horizontal" style="margin: 10px;">
               <div class="form-group">
                 <label for="command">Command</label>
                 <input type="text" ng-model="command" class="form-control" id="command" placeholder="redis cmd">
               </div>
               <div class="form-group">
+                <label for="uri">URI</label>
+                <input type="text" ng-model="uri" class="form-control" id="uri" placeholder="redis uri">
+              </div>
+              <div class="form-group">
                 <label for="args">Args</label>
                 <input type="text" ng-model="args" class="form-control" id="args" placeholder="args for cmd">
               </div>
-                <button class="btn btn-primary" ng-click="send_command(command,args,server)">Send!</button>
+              <button class="btn btn-primary" ng-click="send_command(command,uri,args,server)">Send!</button>
 
             </div>
            <!--  <div class="well well-lg" ng-if="results">
